@@ -1,0 +1,19 @@
+name: Test Slack Notification
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Trigger Slack notification via webhook
+        uses: slackapi/slack-github-action@v1.26.0
+        with:
+          payload-file-path: ".github/notification.json"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        
