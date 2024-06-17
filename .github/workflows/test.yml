@@ -16,4 +16,4 @@ jobs:
           payload-file-path: ".github/notification.json"
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        
+          MORE_TEXT: "Potato"

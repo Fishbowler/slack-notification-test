@@ -1,3 +1,3 @@
 {
-    "NOTIFICATION_TEXT": ":tada: See website https://fishbowler.net"
+    "NOTIFICATION_TEXT": ":potato: ${{ env.MORE_TEXT }} :potato:"
 }
